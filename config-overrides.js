@@ -5,6 +5,7 @@ const {
 } = require('react-app-rewire-typescript-babel-preset');
 const rewireReactHotLoader = require('react-app-rewire-hot-loader');
 const rewireStyledComponents = require('react-app-rewire-styled-components');
+const rewireGqlTag = require('react-app-rewire-graphql-tag');
 
 // // DASHBOARD
 
@@ -17,23 +18,38 @@ const rewireStyledComponents = require('react-app-rewire-styled-components');
 
 // JSX CONTROLS
 
-function rewireJsxControlStatements(config, env, styledComponentsPluginOptions = {}) {
-  return injectBabelPlugin(['module:jsx-control-statements', styledComponentsPluginOptions], config);
+function rewireJsxControlStatements(config, env, options = {}) {
+  return injectBabelPlugin(['module:jsx-control-statements', options], config);
+}
+
+function rewireJestBabel(config, env = {}) {
+  config.transform['\\.(gql|graphql)$'] = 'jest-transform-graphql';
+  return config;
 }
 
 module.exports = {
   webpack: function(config, env) {
     const rewires = compose(
-//      rewireLoaderPlugin,
+      //      rewireLoaderPlugin,
       rewireTypescript,
       rewireReactHotLoader,
       rewireJsxControlStatements,
-      rewireStyledComponents
+      rewireStyledComponents,
+      rewireGqlTag
     );
 
     return rewires(config, env);
   },
-  jest: function(config) {
-    return rewireTypescriptJest(config);
+  jest: function(config, env) {
+    const rewires = compose(
+      rewireTypescriptJest
+      //rewireJestBabel
+    );
+
+    config = rewires(config, env);
+
+    require('fs').writeFileSync('config.json', JSON.stringify(config, null, 2));
+
+    return config;
   }
 };

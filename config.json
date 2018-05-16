@@ -1,0 +1,44 @@
+{
+  "collectCoverageFrom": [
+    "src/**/*.{ts,tsx,js,jsx,mjs}"
+  ],
+  "setupFiles": [
+    "/Users/tomi/Github/apps/corporator/node_modules/react-scripts/config/polyfills.js"
+  ],
+  "testMatch": [
+    "**/__tests__/**/*.{ts,tsx,js,jsx,mjs}",
+    "**/?(*.)(spec|test).{ts,tsx,js,jsx,mjs}"
+  ],
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "testEnvironment": "node",
+  "testURL": "http://localhost",
+  "transform": {
+    "^.+\\.(ts|tsx|js|jsx|mjs)$": "/Users/tomi/Github/apps/corporator/node_modules/react-app-rewire-typescript-babel-preset/dist/rewireBabelTransform.js",
+    "^.+\\.css$": "/Users/tomi/Github/apps/corporator/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^.+\\.(graphql)$": "/Users/tomi/Github/apps/corporator/node_modules/react-scripts/config/jest/graphqlTransform.js",
+    "^(?!.*\\.(ts|tsx|js|jsx|mjs|css|json|graphql)$)": "/Users/tomi/Github/apps/corporator/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(ts|tsx|js|jsx|mjs)$",
+    "^.+\\.module\\.css$"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.css$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "mjs",
+    "js",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node",
+    "ts",
+    "tsx",
+    "web.ts"
+  ],
+  "rootDir": "/Users/tomi/Github/apps/corporator"
+}

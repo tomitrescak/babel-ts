@@ -1,8 +1,12 @@
 import * as React from 'react';
+// import { ApolloProvider } from 'react-apollo';
 import styled, { keyframes } from 'styled-components';
+
 import logo from './logo.svg';
 
 import { hot } from 'react-hot-loader';
+import { BooksContainer } from './apollo_view';
+import { client } from './config/apollo';
 
 const Title = styled.h1`
   font-size: 1.5em;
@@ -44,13 +48,15 @@ const Logo = styled.img`
 `;
 
 class App extends React.Component {
-  render() {
+  public render() {
     return (
+      // <ApolloProvider client={client}>
       <Holder>
         <If condition={true}>JSX Works</If>
         <Header>
           <Title>Other</Title>
           <Logo src={logo} alt="logo" />
+          <BooksContainer />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -59,6 +65,7 @@ class App extends React.Component {
           </Link>
         </Header>
       </Holder>
+      // </ApolloProvider>
     );
   }
 }
