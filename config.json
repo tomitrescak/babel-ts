@@ -1,13 +1,13 @@
 {
   "collectCoverageFrom": [
-    "src/**/*.{ts,tsx,js,jsx,mjs}"
+    "src/**/*.{ts,tsx,js,jsx}"
   ],
   "setupFiles": [
     "/Users/tomi/Github/apps/corporator/node_modules/react-scripts/config/polyfills.js"
   ],
   "testMatch": [
-    "**/__tests__/**/*.{ts,tsx,js,jsx,mjs}",
-    "**/?(*.)(spec|test).{ts,tsx,js,jsx,mjs}"
+    "**/__tests__/**/*.{ts,tsx,js,jsx}",
+    "**/?(*.)(spec|test).{ts,tsx,js,jsx}"
   ],
   "roots": [
     "<rootDir>/src"
@@ -15,13 +15,13 @@
   "testEnvironment": "node",
   "testURL": "http://localhost",
   "transform": {
-    "^.+\\.(ts|tsx|js|jsx|mjs)$": "/Users/tomi/Github/apps/corporator/node_modules/react-app-rewire-typescript-babel-preset/dist/rewireBabelTransform.js",
+    "^.+\\.(ts|tsx|js|jsx|mjs)$": "/Users/tomi/Github/apps/corporator/node_modules/react-app-rewire-typescript-babel-with-apollo-preset/dist/rewireBabelTransform.js",
     "^.+\\.css$": "/Users/tomi/Github/apps/corporator/node_modules/react-scripts/config/jest/cssTransform.js",
     "^.+\\.(graphql)$": "/Users/tomi/Github/apps/corporator/node_modules/react-scripts/config/jest/graphqlTransform.js",
     "^(?!.*\\.(ts|tsx|js|jsx|mjs|css|json|graphql)$)": "/Users/tomi/Github/apps/corporator/node_modules/react-scripts/config/jest/fileTransform.js"
   },
   "transformIgnorePatterns": [
-    "[/\\\\]node_modules[/\\\\].+\\.(ts|tsx|js|jsx|mjs)$",
+    "[/\\\\]node_modules[/\\\\].+\\.(ts|tsx|js|jsx)$",
     "^.+\\.module\\.css$"
   ],
   "moduleNameMapper": {

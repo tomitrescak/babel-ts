@@ -2,10 +2,9 @@ const { compose, injectBabelPlugin } = require('react-app-rewired');
 const {
   rewireWebpack: rewireTypescript,
   rewireJest: rewireTypescriptJest
-} = require('react-app-rewire-typescript-babel-preset');
+} = require('react-app-rewire-typescript-babel-with-apollo-preset');
 const rewireReactHotLoader = require('react-app-rewire-hot-loader');
 const rewireStyledComponents = require('react-app-rewire-styled-components');
-const rewireGqlTag = require('react-app-rewire-graphql-tag');
 
 // // DASHBOARD
 
@@ -34,8 +33,7 @@ module.exports = {
       rewireTypescript,
       rewireReactHotLoader,
       rewireJsxControlStatements,
-      rewireStyledComponents,
-      rewireGqlTag
+      rewireStyledComponents
     );
 
     return rewires(config, env);

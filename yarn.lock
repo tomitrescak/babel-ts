@@ -4331,7 +4331,7 @@ graphql-tag@2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.6.1.tgz#4788d509f6e29607d947fc47a40c4e18f736d34a"
 
-graphql-tag@^2.4.2, graphql-tag@^2.9.2:
+graphql-tag@^2.9.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.9.2.tgz#2f60a5a981375f430bf1e6e95992427dc18af686"
 
@@ -7340,12 +7340,6 @@ react-apollo@^2.1.4:
     lodash "4.17.5"
     prop-types "^15.6.0"
 
-react-app-rewire-graphql-tag@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-app-rewire-graphql-tag/-/react-app-rewire-graphql-tag-1.1.0.tgz#1ba658b7cc375401aae42de926b742d8f6cca2ef"
-  dependencies:
-    graphql-tag "^2.4.2"
-
 react-app-rewire-hot-loader@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-app-rewire-hot-loader/-/react-app-rewire-hot-loader-1.0.1.tgz#511f06d85e1c05d3ea1c3cdaede352e1871183ba"
@@ -7359,9 +7353,9 @@ react-app-rewire-styled-components@^3.0.2:
     babel-plugin-styled-components "^1.1.4"
     react-app-rewired "^1.2.0"
 
-react-app-rewire-typescript-babel-preset@^2.1.1:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/react-app-rewire-typescript-babel-preset/-/react-app-rewire-typescript-babel-preset-2.1.2.tgz#358fe39ec931d742bf14a503b6e53738b6c9d040"
+react-app-rewire-typescript-babel-with-apollo-preset@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/react-app-rewire-typescript-babel-with-apollo-preset/-/react-app-rewire-typescript-babel-with-apollo-preset-2.1.3.tgz#999a87f115bf19e1ef9b06307e863743a617fb1d"
 
 react-app-rewired@^1.2.0:
   version "1.5.2"

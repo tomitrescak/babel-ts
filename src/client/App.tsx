@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider } from 'react-apollo';
 import styled, { keyframes } from 'styled-components';
 
 import logo from './logo.svg';
@@ -50,22 +50,22 @@ const Logo = styled.img`
 class App extends React.Component {
   public render() {
     return (
-      // <ApolloProvider client={client}>
-      <Holder>
-        <If condition={true}>JSX Works</If>
-        <Header>
-          <Title>Other</Title>
-          <Logo src={logo} alt="logo" />
-          <BooksContainer />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <Link href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </Link>
-        </Header>
-      </Holder>
-      // </ApolloProvider>
+      <ApolloProvider client={client}>
+        <Holder>
+          <If condition={true}>JSX Works</If>
+          <Header>
+            <Title>Other</Title>
+            <Logo src={logo} alt="logo" />
+            <BooksContainer />
+            <p>
+              Edit <code>src/App.js</code> and save to reload.
+            </p>
+            <Link href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+              Learn React
+            </Link>
+          </Header>
+        </Holder>
+      </ApolloProvider>
     );
   }
 }
