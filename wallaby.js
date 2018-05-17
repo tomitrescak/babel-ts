@@ -1,6 +1,8 @@
 module.exports = function(wallaby) {
   const testPathExp = 'src/**/*.test.ts?(x)';
 
+  process.env.NODE_ENV = 'test';
+
   var path = require('path');
   process.env.NODE_PATH +=
     path.delimiter +
@@ -26,14 +28,16 @@ module.exports = function(wallaby) {
     },
 
     compilers: {
-      '**/*.js?(x)': wallaby.compilers.babel({
-        babel: require('@babel/core'),
-        presets: ['react-app']
-      }),
       '**/*.ts?(x)': wallaby.compilers.typeScript({
-        module: 'commonjs',
-        jsx: 'React'
+        module: 'es6',
+        jsx: 'jsx'
       })
+    },
+
+    preprocessors: {
+      '**/*.js?(x)': file => require('@babel/core').transform(
+        file.content,
+        {sourceMap: true, compact: false, filename: file.path, presets: ['react-app'], "plugins": ["module:jsx-control-statements"]})
     },
 
     setup: wallaby => {
