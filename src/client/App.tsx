@@ -48,13 +48,17 @@ const Logo = styled.img`
 `;
 
 class App extends React.Component {
+  public state = {
+    i: 0
+  };
+
   public render() {
     return (
       <ApolloProvider client={client}>
         <Holder>
           <If condition={true}>JSX Works</If>
           <Header>
-            <Title>Other</Title>
+            <Title>Other {this.state.i}</Title>
             <Logo src={logo} alt="logo" />
             <BooksContainer />
             <p>
@@ -63,11 +67,16 @@ class App extends React.Component {
             <Link href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
               Learn React
             </Link>
+            <button onClick={this.increment}>Increment</button>
           </Header>
         </Holder>
       </ApolloProvider>
     );
   }
+
+  private increment = () => {
+    this.setState({ i: this.state.i + 1 });
+  };
 }
 
 export default hot(module)(App);

@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders snapshot 1`] = `
+<div
+  className="App__Holder-cZbTBl crTnHz"
+>
+  JSX Works
+  <div
+    className="App__Header-pclPN eCWRij"
+  >
+    <h1
+      className="App__Title-ikgjvl gwMrQA"
+    >
+      Other 
+      0
+    </h1>
+    <img
+      alt="logo"
+      className="App__Logo-cQOErG gcQhau"
+      src="logo.svg"
+    />
+    <div>
+      Loading ...
+    </div>
+    <p>
+      Edit 
+      <code>
+        src/App.js
+      </code>
+       and save to reload.
+    </p>
+    <a
+      className="App__Link-cevQCU doqOVW"
+      href="https://reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Learn React
+    </a>
+    <button
+      onClick={[Function]}
+    >
+      Increment
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders snapshot 2`] = `
+<div
+  className="App__Holder-cZbTBl crTnHz"
+>
+  JSX Works
+  <div
+    className="App__Header-pclPN eCWRij"
+  >
+    <h1
+      className="App__Title-ikgjvl gwMrQA"
+    >
+      Other 
+      1
+    </h1>
+    <img
+      alt="logo"
+      className="App__Logo-cQOErG gcQhau"
+      src="logo.svg"
+    />
+    <div>
+      Loading ...
+    </div>
+    <p>
+      Edit 
+      <code>
+        src/App.js
+      </code>
+       and save to reload.
+    </p>
+    <a
+      className="App__Link-cevQCU doqOVW"
+      href="https://reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Learn React
+    </a>
+    <button
+      onClick={[Function]}
+    >
+      Increment
+    </button>
+  </div>
+</div>
+`;
