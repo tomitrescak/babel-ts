@@ -7,6 +7,7 @@ import logo from './logo.svg';
 import { hot } from 'react-hot-loader';
 import { BooksContainer } from './apollo_view';
 import { client } from './config/apollo';
+import { Routes } from './config/router';
 
 const Title = styled.h1`
   font-size: 1.5em;
@@ -55,21 +56,7 @@ class App extends React.Component {
   public render() {
     return (
       <ApolloProvider client={client}>
-        <Holder>
-          <If condition={true}>JSX Works</If>
-          <Header>
-            <Title>Other {this.state.i}</Title>
-            <Logo src={logo} alt="logo" />
-            <BooksContainer />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <Link href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-              Learn React
-            </Link>
-            <button onClick={this.increment}>Increment</button>
-          </Header>
-        </Holder>
+        <Routes />
       </ApolloProvider>
     );
   }
