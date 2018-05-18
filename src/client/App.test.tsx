@@ -16,8 +16,8 @@ it('renders snapshot', () => {
 
   expect(component).toMatchSnapshot();
 
-  const button = root.findByType('button');
-  button.props.onClick();
+  // const button = root.findByType('button');
+  // button.props.onClick();
 
-  expect(component).toMatchSnapshot();
+  // expect(component).toMatchSnapshot();
 });

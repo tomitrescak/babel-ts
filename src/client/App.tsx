@@ -2,12 +2,12 @@ import * as React from 'react';
 import { ApolloProvider } from 'react-apollo';
 import styled, { keyframes } from 'styled-components';
 
-import logo from './logo.svg';
-
 import { hot } from 'react-hot-loader';
-import { BooksContainer } from './apollo_view';
+
 import { client } from './config/apollo';
 import { Routes } from './config/router';
+
+import 'semantic-ui-css/semantic.min.css';
 
 const Title = styled.h1`
   font-size: 1.5em;
